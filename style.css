@@ -1,0 +1,81 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+header{
+    background-color: rgb(39, 39, 39);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 12px;
+}
+header a{
+    color: black;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    color: goldenrod;
+}
+.logo:hover{
+    cursor: pointer;
+}
+.logo img{
+    width: 50px;
+    height: 50px;
+}
+.menu{
+    width: 40%;
+    height: 100vh;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    display: none;
+    flex-direction: column;
+
+}
+.fecharMenu{
+    position: relative;
+    color: red;
+    right: 13px;
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+.fecharMenu h1{
+    color: red;
+}
+.menu ul li a{
+    color: black;
+}
+.menuItens{
+    position:relative ;
+    background-color: #f3f3f3;;
+}
+.fecharMenu:hover,#click_menu:hover{
+    cursor: pointer;
+}
+.itemsX{
+    padding: 10px;
+    border-bottom: 1px solid rgba(190, 189, 189, 0.747);
+}
+
+.produtos{
+    background-color: rgba(230, 229, 229, 0.322);
+}
+.amigurumi-produto{
+    width: 150px;
+    aspect-ratio: auto 200 / 200;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.amigurumi-produto img{
+    width: 100%;
+}
