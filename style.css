@@ -89,3 +89,7 @@ header a{
     border-bottom: 1px solid #f3f3f3;
     margin-bottom: 3px;
 }
+.MenuTools img{
+    width: 38px;
+    height: 38px;
+}
