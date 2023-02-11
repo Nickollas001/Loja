@@ -81,11 +81,11 @@ header a{
     border-radius: 10px;
     margin: 12px;
 }
+.amigurumi-produto:hover{
+    cursor: pointer;
+}
 .amigurumi-produto img{
     width: 100%;
     border-bottom: 1px solid #f3f3f3;
     margin-bottom: 3px;
-}
-.texto-produtos{
-    
 }

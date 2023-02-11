@@ -3,6 +3,7 @@ var menu = document.getElementById("menu");
 var fecharMenu = document.getElementById("fecharMenu");
 var header = document.getElementById("header");
 var logo = document.getElementById("logo");
+var animes = document.getElementById("animes");
 
 clickMenu.addEventListener("click", function(){
     menu.style.display = "flex";
@@ -15,4 +16,8 @@ fecharMenu.addEventListener("click",function(){
 
 logo.addEventListener("click",function(){
     window.location = "index.html";
-})
+});
+
+animes.addEventListener("click",function(){
+    window.location = "animes.html";
+});
