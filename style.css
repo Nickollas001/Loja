@@ -68,6 +68,8 @@ header a{
     background-color:#f3f3f3;
     display: flex;
     flex-wrap: wrap;
+    border-bottom: 1px solid goldenrod;
+    width: 100%;
 }
 .produtos{
     width: 150px;
@@ -98,3 +100,10 @@ header a{
     font-size: 1.3rem;
 }
 
+
+.title{
+    background-color: #f3f3f3;  
+    border-top: 1px solid goldenrod;
+    padding-left: 3%;
+    padding-top: 10px;
+}
