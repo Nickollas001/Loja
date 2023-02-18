@@ -12,7 +12,7 @@ const tabelaOriginal = [
     {
         id:"2",
         produto: 'Kakashi Hatake',
-        poster: 'amigurumis/animes/Naruto/kakashiHatake/kakashiHatake-NoBg.png',
+        poster: 'amigurumis/animes/Naruto/KakashiHatake/kakashiHatake-NoBg.png',
         link: 'amigurumis/animes/Naruto/KakashiHatake/kakashiHatake.html'
 
     }
