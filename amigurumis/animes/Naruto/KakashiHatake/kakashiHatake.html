@@ -34,15 +34,15 @@
         <section class="container">
             <div class="left">
                 <div class="left_cima">
-                    <img src="kakashiHatake-NoBg.png" alt="">
+                    <img id="poster" src="kakashiHatake-NoBg.png" alt="Kakashi Hatake">
                 </div>
                 <div class="left_baixo">
                     <div>
                         <h3>Imagens do produto</h3>
                     </div>
                     <div>
-                        <img src="kakashiHatake-NoBg.png" alt="">
-                        <img src="kakashiHatake.jpeg" alt="">
+                        <img src="kakashiHatake-NoBg.png" alt="Kakashi Hatake" id="imagem1">
+                        <img src="kakashiHatake.jpeg" alt="Kakashi Hatake" id="imagem2">
                     </div>
                 </div>
             </div>
@@ -50,6 +50,8 @@
                 <div class="titleProduct">
                     <h1 id="nameProduct"></h1>
                 </div>
+                <h3 id="dimensoesProduct"></h3>
+                <h3 id="prazoProduct"></h3>
                 <h2>Kakashi Hatake é um Shinobi da Vila de Konoha. Ele recebeu um Sharingan de seu ex-companheiro de equipe, Obito Uchiha, quando era mais jovem, fazendo-o ser conhecido como Kakashi o Ninja Copiador e Kakashi do Sharingan.</h2>
                 <span><img src="../../../../imagens/frete.png" alt="Caminhão Frete">Entregamos em todo o BRASIL!</span>
                 <h1 id="priceProduct"></h1>
@@ -64,18 +66,40 @@
     const kakashiHatake = [
         {   
             name: "Kakashi Hatake - AMIGURUMI",
-            dimensoes: "X",
-            price: "R$100,00"
+            dimensoes: "14 a 20cms.",
+            price: "R$100,00!",
+            prazo: "7 dias."
         }
     ]
     
     var nameProduct = document.getElementById("nameProduct");
     var priceProduct = document.getElementById("priceProduct");
+    var buttonWhatsapp = document.querySelector(".buttonWhatsapp");
+    var dimensoesProduct = document.getElementById("dimensoesProduct");
+    var prazoProduct = document.getElementById("prazoProduct");
+    var imagem1 = document.getElementById("imagem1");
+    var imagem2 = document.getElementById("imagem2");
+    var poster = document.getElementById("poster");
     kakashiHatake.map( function(produto)
     {
         nameProduct.innerHTML = `${produto.name}`;
         priceProduct.innerHTML = `Por apenas ${produto.price}`;
         priceProduct.style.color = "goldenrod";
+        dimensoesProduct.innerHTML = `Dimensoes: ${produto.dimensoes}`;
+        prazoProduct.innerHTML = `Prazo para o fabricamento: ${produto.prazo}`;
+    })
+    buttonWhatsapp.addEventListener("click",function(){
+        window.location = "https://mywhats.net/KakashiHatakeCassia"
+    })
+    imagem1.addEventListener("click",function(){
+        poster.setAttribute('src', 'kakashiHatake-NoBg.png');
+        imagem1.style.border = "1px solid goldenrod";
+        imagem2.style.border = "0px solid red";
+    })
+    imagem2.addEventListener("click",function(){
+        poster.setAttribute('src', 'kakashiHatake.jpeg');
+        imagem2.style.border = "1px solid goldenrod";
+        imagem1.style.border = "0px solid black";
     })
 
 </script>

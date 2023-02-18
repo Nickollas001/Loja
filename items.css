@@ -6,6 +6,7 @@
     justify-content: center;
     gap: 50px;
     margin: 15px auto;
+    box-sizing: border-box;
 }
 .left{
     width: 30%;
@@ -16,7 +17,7 @@
     width:70%;
     display: flex;
     flex-direction: column;
-    gap: 70px;
+    justify-content: space-between;
 }
 main{
     margin: 0 auto;
@@ -38,7 +39,7 @@ main{
     justify-content: center;
     align-items: center;
     margin-top: 5px;
-    
+    aspect-ratio: auto 50 / 50;
 }
 .left_baixo img{
     width: 50px;
@@ -66,10 +67,20 @@ span img{
     display: flex;
     background-color:#34af23;
 }
+.buttonWhatsapp:hover{
+    cursor: pointer;
+}
 .buttonWhatsapp img{
     width: 60px;
 }
 #nameProduct{
     text-align: center;
     font-weight: 600;
+}
+#imagem1{
+    border: 1px solid goldenrod
+}
+#poster{
+    animation: 1s;
+    transition: 1s;
 }
