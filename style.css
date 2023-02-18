@@ -13,13 +13,14 @@ header{
     padding: 12px;
 }
 header a{
-    color: black;
+    color: goldenrod;
 }
 .logo{
     display: flex;
     align-items: center;
     color: goldenrod;
-}
+};
+
 .logo:hover{
     cursor: pointer;
 }
