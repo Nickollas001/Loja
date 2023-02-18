@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    width: 98%;
+    height: 100vh;
+    background-color: #f3f3f3;
+    margin: 0 auto;
+}
+.left{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.right{
+    width:70%
+}
+main{
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+}
+.left_cima{
+    aspect-ratio: auto 200 / 200;
+}
+.left_cima img{
+    width:  100%;
+    height: 100%;
+}
+.left_baixo{
+    display: flex;
+    gap: 8px ;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    
+}
+.left_baixo img{
+    width: 50px;
+    height: 50px;
+};

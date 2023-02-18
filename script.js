@@ -24,7 +24,7 @@ const carregarListaDeProdutos = function(){
     containerDaListaDeProdutos.innerHTML = "";
 
     tabelaDeProdutos.map( function(produto){
-        containerDaListaDeProdutos.innerHTML += `
+        containerDaListaDeProdutos.innerHTML +=  `
 
             <div class="produtos">
             <a href="${produto.link}"><img src="${produto.poster}" alt="${produto.produto}"></a>
