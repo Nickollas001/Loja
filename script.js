@@ -6,13 +6,14 @@ const tabelaOriginal = [
     {
         id: 1,
         produto: 'Naruto Uzumaki',
-        poster: 'amigurumis/animes/Naruto/Naruto-NoBG.png'
+        poster: 'amigurumis/animes/Naruto/Naruto/Naruto-NoBG.png'
 
     },
     {
         id:"2",
         produto: 'Kakashi Hatake',
-        poster: 'amigurumis/animes/Naruto/kakashiHatake-NoBg.png'
+        poster: 'amigurumis/animes/Naruto/kakashiHatake/kakashiHatake-NoBg.png',
+        link: 'amigurumis/animes/Naruto/KakashiHatake/kakashiHatake.html'
 
     }
 ];
@@ -26,7 +27,7 @@ const carregarListaDeProdutos = function(){
         containerDaListaDeProdutos.innerHTML += `
 
             <div class="produtos">
-                <img src="${produto.poster}" alt"">
+            <a href="${produto.link}"><img src="${produto.poster}" alt="${produto.produto}"></a>
                 <h2 class="texto-produtos">${produto.produto}</h2>
             </div>
         `
