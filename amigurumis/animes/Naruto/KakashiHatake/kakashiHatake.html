@@ -37,24 +37,47 @@
                     <img src="kakashiHatake-NoBg.png" alt="">
                 </div>
                 <div class="left_baixo">
-                    <img src="kakashiHatake-NoBg.png" alt="">
-                    <img src="kakashiHatake.jpeg" alt="">
+                    <div>
+                        <h3>Imagens do produto</h3>
+                    </div>
+                    <div>
+                        <img src="kakashiHatake-NoBg.png" alt="">
+                        <img src="kakashiHatake.jpeg" alt="">
+                    </div>
                 </div>
             </div>
-            <div class="right"></div>
-            
+            <div class="right">
+                <div class="titleProduct">
+                    <h1 id="nameProduct"></h1>
+                </div>
+                <h2>Kakashi Hatake é um Shinobi da Vila de Konoha. Ele recebeu um Sharingan de seu ex-companheiro de equipe, Obito Uchiha, quando era mais jovem, fazendo-o ser conhecido como Kakashi o Ninja Copiador e Kakashi do Sharingan.</h2>
+                <span><img src="../../../../imagens/frete.png" alt="Caminhão Frete">Entregamos em todo o BRASIL!</span>
+                <h1 id="priceProduct"></h1>
+                <span class="buttonWhatsapp">Faça já a sua encomenda! <img src="../../../../imagens/whatsapp.png" alt="Wahtsapp Icone"></span>
+            </div>
+</style>
         </section>
         
     </main>
 </body>
 <script>
-    kakashiHatake [
+    const kakashiHatake = [
         {   
-            name: "Kakashi Hatake",
+            name: "Kakashi Hatake - AMIGURUMI",
             dimensoes: "X",
             price: "R$100,00"
         }
     ]
+    
+    var nameProduct = document.getElementById("nameProduct");
+    var priceProduct = document.getElementById("priceProduct");
+    kakashiHatake.map( function(produto)
+    {
+        nameProduct.innerHTML = `${produto.name}`;
+        priceProduct.innerHTML = `Por apenas ${produto.price}`;
+        priceProduct.style.color = "goldenrod";
+    })
+
 </script>
 <script src="../../../../root.js"></script>
 </html>

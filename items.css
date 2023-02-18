@@ -1,9 +1,11 @@
 .container{
     display: flex;
-    width: 98%;
+    width: 95%;
     height: 100vh;
-    background-color: #f3f3f3;
-    margin: 0 auto;
+    background-color: white;
+    justify-content: center;
+    gap: 50px;
+    margin: 15px auto;
 }
 .left{
     width: 30%;
@@ -11,12 +13,16 @@
     flex-direction: column;
 }
 .right{
-    width:70%
+    width:70%;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
 }
 main{
     margin: 0 auto;
     width: 100%;
     display: flex;
+    background-color: #f3f3f3;
 }
 .left_cima{
     aspect-ratio: auto 200 / 200;
@@ -27,13 +33,43 @@ main{
 }
 .left_baixo{
     display: flex;
+    flex-direction: column;
     gap: 8px ;
     justify-content: center;
     align-items: center;
-    background-color: red;
+    margin-top: 5px;
     
 }
 .left_baixo img{
     width: 50px;
     height: 50px;
-};
+}
+
+span{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+span img{
+    width: 50px;
+}
+.right h2{
+    color: rgb(114, 114, 114);
+    font-weight: 100;
+}
+.buttonWhatsapp{
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    background-color:#34af23;
+}
+.buttonWhatsapp img{
+    width: 60px;
+}
+#nameProduct{
+    text-align: center;
+    font-weight: 600;
+}
