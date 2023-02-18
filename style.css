@@ -64,27 +64,28 @@ header a{
     border-bottom: 1px solid rgba(190, 189, 189, 0.747);
 }
 
-.produtos{
+.listaDeProdutos{
     background-color:#f3f3f3;
     display: flex;
     flex-wrap: wrap;
 }
-.amigurumi-produto{
+.produtos{
     width: 150px;
     aspect-ratio: auto 200 / 200;
     padding: 10px;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     display: flex;
     flex-direction: column;
     background-color: white;
     border-radius: 10px;
-    margin: 12px;
+    margin: 20px;
+    text-align: center;
 }
-.amigurumi-produto:hover{
+.produtos:hover{
     cursor: pointer;
 }
-.amigurumi-produto img{
+.produtos img{
     width: 100%;
     border-bottom: 1px solid #f3f3f3;
     margin-bottom: 3px;
@@ -93,3 +94,7 @@ header a{
     width: 38px;
     height: 38px;
 }
+.texto-produtos{
+    font-size: 1.3rem;
+}
+

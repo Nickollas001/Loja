@@ -1,23 +1,53 @@
-var clickMenu = document.getElementById("click_menu");
-var menu = document.getElementById("menu");
-var fecharMenu = document.getElementById("fecharMenu");
-var header = document.getElementById("header");
-var logo = document.getElementById("logo");
-var animes = document.getElementById("animes");
 
-clickMenu.addEventListener("click", function(){
-    menu.style.display = "flex";
-    header.style.backgroundColor ="rgba(0, 0, 0, 0.800)";
-    
-});
-fecharMenu.addEventListener("click",function(){
-    menu.style.display = "none";
-});
+const containerDaListaDeProdutos = document.querySelector(".listaDeProdutos");
+const campoDePesquisa = document.querySelector("#campoPesquisar");
 
-logo.addEventListener("click",function(){
-    window.location = "index.html";
-});
+const tabelaOriginal = [
+    {
+        id: 1,
+        produto: 'Naruto Uzumaki',
+        poster: 'amigurumis/animes/Naruto/Naruto-NoBG.png'
 
-animes.addEventListener("click",function(){
-    window.location = "animes.html";
+    },
+    {
+        id:"2",
+        produto: 'Kakashi Hatake',
+        poster: 'amigurumis/animes/Naruto/kakashiHatake-NoBg.png'
+
+    }
+];
+
+let tabelaDeProdutos = tabelaOriginal;
+
+const carregarListaDeProdutos = function(){
+    containerDaListaDeProdutos.innerHTML = "";
+
+    tabelaDeProdutos.map( function(produto){
+        containerDaListaDeProdutos.innerHTML += `
+
+            <div class="produtos">
+                <img src="${produto.poster}" alt"">
+                <h2 class="texto-produtos">${produto.produto}</h2>
+            </div>
+        `
+    })
+};
+
+carregarListaDeProdutos();
+
+function retirar_acentos(text){
+    const a = 'àáäâãèéëêìíïîòóöôùúüûñçßÿœæŕśńṕẃǵǹḿǘẍźḧ·/_,:;';
+    const b = 'aaaaaeeeeiiiioooouuuuncsyoarsnpwgnmuxzh------';
+    const p = new RegExp(a.split('').join('|'), 'g');
+    return text.toString().toLowerCase().trim()
+    .replace(p, c => b.charAt(a.indexOf(c)))
+    .replace(/&/g, '-and-')
+    .replace(/[\s\W-]+/g, ' ');
+};
+
+campoDePesquisa.addEventListener("keyup", function(){
+    const resultado = tabelaDeProdutos.filter((produto)=> retirar_acentos(produto.produto).includes(retirar_acentos(campoDePesquisa.value)));
+    tabelaDeProdutos = resultado;
+    carregarListaDeProdutos();
+    tabelaDeProdutos = tabelaOriginal;
 });
