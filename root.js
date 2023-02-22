@@ -2,7 +2,6 @@ var clickMenu = document.getElementById("click_menu");
 var menu = document.getElementById("menu");
 var fecharMenu = document.getElementById("fecharMenu");
 var header = document.getElementById("header");
-var logo = document.getElementById("logo");
 
 clickMenu.addEventListener("click", function(){
     menu.style.display = "flex";
@@ -11,8 +10,4 @@ clickMenu.addEventListener("click", function(){
 });
 fecharMenu.addEventListener("click",function(){
     menu.style.display = "none";
-});
-
-logo.addEventListener("click",function(){
-    window.location = "index.html";
 });
