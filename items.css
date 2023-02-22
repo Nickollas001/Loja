@@ -111,6 +111,12 @@ span img{
     }
     .right,.left{
         width: 100%;
-    }
 
+    }
+    .titleProduct{
+    margin-top: 3px;
+}
+    .left_baixo{
+        aspect-ratio: auto 144 / 20;
+}
 }
