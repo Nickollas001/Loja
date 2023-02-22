@@ -8,6 +8,7 @@
     margin: 15px auto;
     box-sizing: border-box;
 }
+
 .left{
     width: 30%;
     display: flex;
@@ -83,4 +84,33 @@ span img{
 #poster{
     animation: 1s;
     transition: 1s;
+}
+@media screen and (max-width: 1000px){
+    .right{
+        font-size: 11px;
+        
+    }
+    .buttonWhatsapp img{
+        width: 35px;
+    }
+}
+@media screen and (max-width: 870px){
+    .right{
+        justify-content: initial;
+        gap: 2.3rem;
+    }
+}
+@media screen and (max-width: 723px){
+    .right{
+        gap: 1.5rem;
+    }
+}
+@media screen and (max-width: 700px) {
+    .container{
+        display: block;
+    }
+    .right,.left{
+        width: 100%;
+    }
+
 }
