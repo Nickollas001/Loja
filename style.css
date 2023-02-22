@@ -121,9 +121,106 @@ header a{
     border-radius: 10px;
 }
 .pesquisar{
-    width: 700px;
+    width: 45vmax;
 }
 .titleProduct{
     margin-top: 20px;
 }
-
+@media screen and (max-width: 1275px){
+    #campoPesquisar{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 1124px){
+    .logo h1{
+        font-size: 22px;
+    }
+    #campoPesquisar{
+        width: 75%;
+    }
+    header{
+        gap: 40px;
+    }
+}
+@media screen and (max-width: 1036px){
+    .logo h1{
+        font-size: 18px;
+    }
+    .logo img{
+        width: 45px;
+        height: 45px;
+    }
+    #campoPesquisar{
+        width: 75%;
+        padding: 8px;
+    }
+    header{
+        gap: 25px;
+    }
+    .MenuTools img {
+        width: 33px;
+        height: 33px;
+    }
+}
+@media screen and (max-width: 969px){
+    .logo h1{
+        font-size: 16px;
+    }
+    .logo img{
+        width: 37px;
+        height: 37px;
+    }
+    #campoPesquisar{
+        width: 70%;
+        padding: 6px;
+    }
+    header{
+        gap: 19px;
+    }
+    .MenuTools img {
+        width: 26px;
+        height: 26px;
+    }
+}
+@media screen and (max-width: 927px){
+    .logo h1{
+        font-size: 14px;
+    }
+    .logo img{
+        width: 33px;
+        height: 33px;
+    }
+    #campoPesquisar{
+        width: 60%;
+        padding: 6px;
+        text-align: center;
+    }
+    header{
+        gap: 19px;
+    }
+    .MenuTools img {
+        width: 22px;
+        height: 22px;
+    }
+}
+@media screen and (max-width: 449px){
+    .logo h1{
+        display: none;
+    }
+    .logo img{
+        width: 33px;
+        height: 33px;
+    }
+    #campoPesquisar{
+        width: 60%;
+        padding: 6px;
+        text-align: center;
+    }
+    header{
+        gap: 19px;
+    }
+    .MenuTools img {
+        width: 22px;
+        height: 22px;
+    }
+}
