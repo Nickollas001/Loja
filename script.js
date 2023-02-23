@@ -3,12 +3,12 @@ const containerDaListaDeProdutos = document.querySelector(".listaDeProdutos");
 const campoDePesquisa = document.querySelector("#campoPesquisar");
 
 const tabelaOriginal = [
-    {
-        id: 1,
-        produto: 'Naruto Uzumaki',
-        poster: 'amigurumis/animes/Naruto/Naruto/Naruto-NoBG.png'
+    // {
+    //     id: 1,
+    //     produto: 'Naruto Uzumaki',
+    //     poster: 'amigurumis/animes/Naruto/Naruto/Naruto-NoBG.png'
 
-    },
+    // },
     {
         id:"2",
         produto: 'Kakashi Hatake',
