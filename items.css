@@ -85,6 +85,7 @@ span img{
     animation: 1s;
     transition: 1s;
 }
+
 @media screen and (max-width: 1000px){
     .right{
         font-size: 11px;
