@@ -7,7 +7,7 @@ const tabelaOriginal = [
          id: 1,
          produto: 'Naruto',
          poster: 'amigurumis/animes/Naruto/Naruto/Naruto-NoBG.png',
-         link: 'animes.html'
+         link: 'naruto.html'
 
      },
     // {
