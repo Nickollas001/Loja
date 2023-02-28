@@ -78,7 +78,8 @@ header a{
 .listaDeProdutos{
     background-color:#f3f3f3;
     display: flex;
-    flex-wrap: wrap;
+    overflow-y: scroll;
+    flex-wrap: nowrap;
     border-bottom: 1px solid goldenrod;
     width: 100%;
 }
@@ -249,9 +250,5 @@ main{
         width: 100px;
         aspect-ratio: auto 150 / 150;
     }    
-    .listaDeProdutos{
-        scroll-snap-type: x;
-        scroll-snap-type: y;
-        flex-wrap: nowrap;
-    }
+
 }
