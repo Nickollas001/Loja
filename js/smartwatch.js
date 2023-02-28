@@ -8,6 +8,7 @@ const tabelaOriginal = [
          produto: 'Y68/D20',
          valor: 'R$30,00.',
          poster: 'smartwatch/smartwatchY68/Y68.jpg',
+         link: 'smartwatch/smartwatchY68/smartwatchY68.html'
 
      },
     // {
