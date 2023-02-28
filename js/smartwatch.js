@@ -6,7 +6,7 @@ const tabelaOriginal = [
      {
          id: 1,
          produto: 'Y68/D20',
-         valor: 'R$30,00.',
+         valor: 'R$29,99.',
          poster: 'smartwatch/smartwatchY68/Y68.jpg',
          link: 'smartwatch/smartwatchY68/smartwatchY68.html'
 
