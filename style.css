@@ -244,3 +244,12 @@ main{
     min-height: 100vh;
     flex: 1;
 }
+@media screen and (max-width: 420px) {
+    .produtos{
+        width: 100px;
+        aspect-ratio: auto 150 / 150;
+    }    
+    .listaDeProdutos{
+        scroll-snap-type: y
+    }
+}
