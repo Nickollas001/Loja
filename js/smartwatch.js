@@ -5,18 +5,18 @@ const campoDePesquisa = document.querySelector("#campoPesquisar");
 const tabelaOriginal = [
      {
          id: 1,
-         produto: 'Smartwatchs',
+         produto: 'Y68/D20',
+         valor: 'R$30,00.',
          poster: 'smartwatch/smartwatchY68/Y68.jpg',
-         link: 'smartwatch.html'
 
      },
-    {
-        id:"2",
-        produto: 'Amigurumis',
-        poster: 'amigurumis/animes/Naruto/KakashiHatake/kakashiHatake-NoBg.png',
-        link: 'amigurumis.html'
+    // {
+    //     id:"2",
+    //     produto: 'Kakashi Hatake',
+    //     poster: 'amigurumis/animes/Naruto/KakashiHatake/kakashiHatake-NoBg.png',
+    //     link: 'amigurumis/animes/Naruto/KakashiHatake/kakashiHatake.html'
 
-    }
+    // }
 ];
 
 let tabelaDeProdutos = tabelaOriginal;
@@ -30,6 +30,7 @@ const carregarListaDeProdutos = function(){
             <div class="produtos">
             <a href="${produto.link}"><img src="${produto.poster}" alt="${produto.produto}"></a>
                 <h2 class="texto-produtos">${produto.produto}</h2>
+                <h1 class="texto-valor">${produto.valor}</h1>
             </div>
         `
     })
