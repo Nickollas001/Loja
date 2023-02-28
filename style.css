@@ -250,6 +250,7 @@ main{
         aspect-ratio: auto 150 / 150;
     }    
     .listaDeProdutos{
-        scroll-snap-type: y
+        scroll-snap-type: x;
+        scroll-snap-type: y;
     }
 }
