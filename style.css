@@ -252,5 +252,6 @@ main{
     .listaDeProdutos{
         scroll-snap-type: x;
         scroll-snap-type: y;
+        flex-wrap: nowrap;
     }
 }
