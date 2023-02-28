@@ -232,3 +232,11 @@ header a{
     width: 49px;
     height: 49px;
 }
+.logoinsta img{
+    width: 30px;
+    height: 30px;
+}
+main{
+    min-height: 100vh;
+    flex: 1;
+}

@@ -5,15 +5,15 @@ const campoDePesquisa = document.querySelector("#campoPesquisar");
 const tabelaOriginal = [
     // {
     //     id: 1,
-    //     produto: 'Naruto Uzumaki',
+    //     produto: 'Mouse',
     //     poster: 'amigurumis/animes/Naruto/Naruto/Naruto-NoBG.png'
 
     // },
     {
         id:"2",
-        produto: 'Kakashi Hatake',
+        produto: 'Amigurumis',
         poster: 'amigurumis/animes/Naruto/KakashiHatake/kakashiHatake-NoBg.png',
-        link: 'amigurumis/animes/Naruto/KakashiHatake/kakashiHatake.html'
+        link: 'amigurumis.html'
 
     }
 ];
