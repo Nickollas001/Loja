@@ -5,9 +5,9 @@ const campoDePesquisa = document.querySelector("#campoPesquisar");
 const tabelaOriginal = [
      {
          id: 1,
-         produto: 'Animes',
-         poster: 'amigurumis/animes/Naruto/Naruto/Naruto-NoBG.png',
-         link: 'animes.html'
+         produto: 'Blusas',
+         poster: 'Roupas/Blusa/Brilho/Rosa1.png',
+         link: 'blusas.html'
 
      },
     // {

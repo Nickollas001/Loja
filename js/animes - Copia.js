@@ -3,27 +3,20 @@ const containerDaListaDeProdutos = document.querySelector(".listaDeProdutos");
 const campoDePesquisa = document.querySelector("#campoPesquisar");
 
 const tabelaOriginal = [
-    //  {
-    //      id: 1,
-    //      produto: 'Smartwatchs',
-    //      poster: 'smartwatch/smartwatchY68/Y68.jpg',
-    //      link: 'smartwatch.html'
+     {
+         id: 1,
+         produto: 'Naruto',
+         poster: 'amigurumis/animes/Naruto/Naruto/Naruto-NoBG.png',
+         link: 'amigurumis/animes/Naruto/narutoAnime.html'
 
-    //  },
-    {
-        id:"2",
-        produto: 'Roupas',
-        poster: 'Roupas/Blusa/Brilho/Rosa1.png',
-        link: 'roupas.html'
+     },
+    // {
+    //     id:"2",
+    //     produto: 'Kakashi Hatake',
+    //     poster: 'amigurumis/animes/Naruto/KakashiHatake/kakashiHatake-NoBg.png',
+    //     link: 'amigurumis/animes/Naruto/KakashiHatake/kakashiHatake.html'
 
-    },
-    {
-        id:"3",
-        produto: 'Academia',
-        poster: 'academia/handgrip/handgrip (1).png',
-        link: 'academia.html'
-
-    }
+    // }
 ];
 
 let tabelaDeProdutos = tabelaOriginal;
