@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moraes Store | Handgrip </title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../items.css">
+</head>
+<body>
+    <div class="menu" id="menu">
+        <div class="fecharMenu" id="fecharMenu"><h1>X</h1></div>
+        <div class="menuItens">
+            <ul>
+                <li class="itemsX"><a href="../../amigurumis.html">Amigurumis</a></li>
+            </ul>
+        </div>
+    </div>
+    <header id="header">
+            <div class="MenuTools">
+                <img src="../../icone.png" id="click_menu" alt="menu">
+            </div>
+            <div class="logo" id="logo">
+                <a class="logoFoto" href="../../index.html"><img src="../../imagens/logo.png" alt="Moraes Store Logo"></a>
+                <a href="../../index.html"><h1>Moraes Store</h1></a>
+            </div>
+    </header>
+    
+    <main>
+        <section class="container">
+            <div class="left">
+                <div class="left_cima">
+                    <img id="poster" src="handgrip (1).png" alt="Handgrip">
+                </div>
+                <div class="left_baixo">
+                    <div>
+                        <h3>Imagens do produto</h3>
+                    </div>
+                    <div>
+                        <img src="handgrip (1).png" alt="hangdrip fisioterapia academia antebraço" id="imagem1">
+                        <img src="handgrip (2).png" alt="hangdrip fisioterapia academia antebraço" id="imagem2">
+                        <img src="handgrip (3).png" alt="hangdrip fisioterapia academia antebraço" id="imagem3">
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="titleProduct">
+                    <h1 id="nameProduct"></h1>
+                </div><br>
+                <h2><strong>Especificacoes Tecnicas:</strong><br>
+                    Usado para exercícios de fortalecimento, auxilia na má circulação sanguínea, torções e lesões temporárias. <br>
+                    Seu formato anatômico e a posição da mola são ideais para qualquer tamanho de mão, facilitando o exercício de reabilitação e fortalecimento para as mãos, punhos e antebraços. <br>
+
+Você ajusta na intensidade que precisa, de acordo com a sua força e desempenho desejado, sem complicações. <br>
+
+Utilizado para fortalecimento da musculatura das mãos, punho, dedos e antebraço, ajuda também na recuperação de lesões. <br>
+
+O acessório é ajustável, através do rolete, entre 05 e 60 kg. <br>
+                    <br>
+                    <strong>Produto acompanha:</strong><br>
+                    - 1 Handgrip</h2><br>
+                <span><img src="../../imagens/frete.png" alt="Caminhão Frete">Entregamos em todo o BRASIL!</span><br>
+                <h1 id="priceProduct"></h1>
+                <span class="buttonWhatsapp">Faça já a sua encomenda! <img src="../../imagens/whatsapp.png" alt="Wahtsapp Icone"></span>
+            </div>
+</style>
+        </section>
+        
+    </main>
+</body>
+<script>
+    const product = [
+        {   
+            name: "Handgrip treino para antebraços",
+            price: "R$29,99!",
+        }
+    ]
+    
+    var nameProduct = document.getElementById("nameProduct");
+    var priceProduct = document.getElementById("priceProduct");
+    var buttonWhatsapp = document.querySelector(".buttonWhatsapp");
+    var imagem1 = document.getElementById("imagem1");
+    var imagem2 = document.getElementById("imagem2");
+    var poster = document.getElementById("poster");
+    product.map( function(produto)
+    {
+        nameProduct.innerHTML = `${produto.name}`;
+        priceProduct.innerHTML = `Por apenas ${produto.price}`;
+        priceProduct.style.color = "goldenrod";
+    })
+    buttonWhatsapp.addEventListener("click",function(){
+        window.location = "https://mywhats.net/moraesstoresmartwatchy68"
+    })
+    imagem1.addEventListener("click",function(){
+        poster.setAttribute('src', 'handgrip (1).png');
+        imagem1.style.border = "1px solid goldenrod";
+        imagem2.style.border = "0px solid black";
+        imagem3.style.border = "0px solid black";
+    })
+    imagem2.addEventListener("click",function(){
+        poster.setAttribute('src', 'handgrip (2).png');
+        imagem1.style.border = "0px solid black";
+        imagem2.style.border = "1px solid goldenrod";
+        imagem3.style.border = "0px solid black";
+    })
+    imagem3.addEventListener("click",function(){
+        poster.setAttribute('src', 'handgrip (3).png');
+        imagem1.style.border = "0px solid black";
+        imagem2.style.border = "0px solid black";
+        imagem3.style.border = "1px solid goldenrod";
+    })
+
+</script>
+<script src="../../root.js"></script>
+</html>

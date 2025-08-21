@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N&C Empreendimentos | Canecas Brancas </title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../items.css">
+</head>
+<body>
+    <div class="menu" id="menu">
+        <div class="fecharMenu" id="fecharMenu"><h1>X</h1></div>
+        <div class="menuItens">
+            <ul>
+                <li class="itemsX"><a href="../../amigurumis.html">Amigurumis</a></li>
+            </ul>
+        </div>
+    </div>
+    <header id="header">
+            <div class="MenuTools">
+                <img src="../../icone.png" id="click_menu" alt="menu">
+            </div>
+            <div class="logo" id="logo">
+                <a class="logoFoto" href="../../index.html"><img src="../../imagens/logo.png" alt="Moraes Store Logo"></a>
+                <a href="../../index.html"><h1>Moraes Store</h1></a>
+            </div>
+    </header>
+    
+    <main>
+        <section class="container">
+            <div class="left">
+                <div class="left_cima">
+                    <img id="poster" src="canecaBranca.png" alt="Handgrip">
+                </div>
+                <div class="left_baixo">
+                    <div>
+                        <h3>Imagens do produto</h3>
+                    </div>
+                    <div>
+                        <img src="canecaBranca.png" alt="Caneca Branca Personalizada" id="imagem1">
+                        <img src="canecaBranca.png" alt="hangdrip fisioterapia academia antebraço" id="imagem2">
+                        <img src="canecaBranca.png" alt="hangdrip fisioterapia academia antebraço" id="imagem3">
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="titleProduct">
+                    <h1 id="nameProduct"></h1>
+                </div><br>
+                <h2><strong></strong>
+                    Comece o dia com uma caneca que tem a sua cara! Perfeita para presentear quem você ama ou para dar um toque de personalidade à sua rotina. Personalizamos com fotos, artes, logos de empresas ou frases que contam a sua história.</h2>
+<br><h1>Para empresas:</h1>
+    <h2>Sua marca merece DESTAQUE! Criamos canecas personalizadas com a sua logo para FORTALECER sua identidade e surpreender seus clientes e colaboradores. <BR>Fale conosco e peça seu orçamento com DESCONTO ESPECIAL para pedidos em quantidade!
+                    <br>
+    </H2>
+                    <H1><br><strong>O que você recebe:</strong><br></H1>
+<h2><strong>
+    1 Caneca Branca de Cerâmica Personalizada <br>
+
+    Impressão de alta qualidade<br>
+
+    Embalagem segura e cuidadosa<br>
+
+    Capacidade: 325ml <br>
+</strong>
+
+</h2>
+                <span><img src="../../imagens/frete.png" alt="Caminhão Frete">Entregamos em todo o BRASIL!</span><br>
+                <h1 id="priceProduct"></h1>
+                <span class="buttonWhatsapp">Faça já a sua encomenda! <img src="../../imagens/whatsapp.png" alt="Wahtsapp Icone"></span>
+            </div>
+</style>
+        </section>
+        
+    </main>
+</body>
+<script>
+    const product = [
+        {   
+            name: "Caneca Branca Personalizada: Sua Arte, Nossa Magia.",
+            price: "R$30!",
+        }
+    ]
+    
+    var nameProduct = document.getElementById("nameProduct");
+    var priceProduct = document.getElementById("priceProduct");
+    var buttonWhatsapp = document.querySelector(".buttonWhatsapp");
+    var imagem1 = document.getElementById("imagem1");
+    var imagem2 = document.getElementById("imagem2");
+    var poster = document.getElementById("poster");
+    product.map( function(produto)
+    {
+        nameProduct.innerHTML = `${produto.name}`;
+        priceProduct.innerHTML = `Por apenas ${produto.price}`;
+        priceProduct.style.color = "goldenrod";
+    })
+    buttonWhatsapp.addEventListener("click",function(){
+        window.location = "https://wa.me/555599028875?text=Olá%20vim%20do%20site%2C%20quero%20realizar%20o%20orçamento%20das%20canecas%20brancas%20personalizadas"
+
+    })
+    imagem1.addEventListener("click",function(){
+        poster.setAttribute('src', 'canecaBranca.png');
+        imagem1.style.border = "1px solid goldenrod";
+        imagem2.style.border = "0px solid black";
+        imagem3.style.border = "0px solid black";
+    })
+    imagem2.addEventListener("click",function(){
+        poster.setAttribute('src', 'canecaBranca.png');
+        imagem1.style.border = "0px solid black";
+        imagem2.style.border = "1px solid goldenrod";
+        imagem3.style.border = "0px solid black";
+    })
+    imagem3.addEventListener("click",function(){
+        poster.setAttribute('src', 'canecaBranca.png');
+        imagem1.style.border = "0px solid black";
+        imagem2.style.border = "0px solid black";
+        imagem3.style.border = "1px solid goldenrod";
+    })
+
+</script>
+<script src="../../root.js"></script>
+</html>
