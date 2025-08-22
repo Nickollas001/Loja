@@ -139,9 +139,7 @@ span img{
     .titleProduct{
     margin-top: 3px;
 }
-    .left_baixo{
-        aspect-ratio: auto 144 / 20;
-}
+
 }
 @media screen and (max-width: 700px) {
     main{
@@ -154,6 +152,11 @@ span img{
     }
 }
 @media screen and (max-width: 599px){
+    .left_baixo{
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
     .exemplos a{
         width: 48%;
     }
