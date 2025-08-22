@@ -1,7 +1,7 @@
 .container{
     display: flex;
     width: 95%;
-    height: 100vh;
+    height: 100%;
     background-color: white;
     justify-content: center;
     gap: 50px;
@@ -23,7 +23,6 @@
 main{
     margin: 0 auto;
     width: 100%;
-    display: flex;
     background-color: #f3f3f3;
 }
 .left_cima{
@@ -85,6 +84,16 @@ span img{
     animation: 1s;
     transition: 1s;
 }
+
+.exemplos{
+    display: flex;
+    flex-wrap: wrap;
+}
+.exemplos img{
+    width: 200px;
+    height: 200px                                ;
+}
+
 
 @media screen and (max-width: 1000px){
     .right{
