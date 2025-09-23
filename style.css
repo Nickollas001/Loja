@@ -79,7 +79,7 @@ header a{
     background-color:#f3f3f3;
     display: flex;
     overflow-y: scroll;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     border-bottom: 1px solid goldenrod;
     width: 100%;
 }
