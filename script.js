@@ -9,6 +9,11 @@ const produtosIndividuais = [
         link: "canecas/canecaBrancas/index.html"
     },
     {
+        nome: "Jarra eletrica Simo 1,8l 220v",
+        poster: "eletrodomesticos/jarraEletricaSimo.jpg",
+        link: "index.html"
+    },
+    {
         nome: "Creatina Max Titanium 300g",
         poster: "suplementos/creatine-max-titanium-300g-1.webp",
         link: "suplementos/CreatinaMaxTitanium.html"
