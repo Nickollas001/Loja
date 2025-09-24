@@ -1,76 +1,73 @@
-
 const containerDaListaDeProdutos = document.querySelector(".listaDeProdutos");
 const campoDePesquisa = document.querySelector("#campoPesquisar");
 
-const tabelaOriginal = [
+// Lista de produtos individuais
+const produtosIndividuais = [
     {
-        id:"1",
-        produto: 'Canecas Personalizadas',
-        poster: 'canecas/canecaBrancas/canecaBranca.png',
-        link: 'canecas.html'
-
-    },
-    //  {
-    //      id: 1,
-    //      produto: 'Smartwatchs',
-    //      poster: 'smartwatch/smartwatchY68/Y68.jpg',
-    //      link: 'smartwatch.html'
-
-    //  },
-    {
-        id:"2",
-        produto: 'Roupas',
-        poster: 'Roupas/Blusa/Brilho/Rosa1.png',
-        link: 'roupas.html'
-
+        nome: "Caneca Branca Personalizada",
+        poster: "canecas/canecaBrancas/canecaBranca.png",
+        link: "canecas/canecaBrancas/index.html"
     },
     {
-        id:"3",
-        produto: 'Academia',
-        poster: 'academia/handgrip/handgrip (1).png',
-        link: 'academia.html'
-
+        nome: "Creatina Max Titanium 300g",
+        poster: "suplementos/creatine-max-titanium-300g-1.webp",
+        link: "suplementos/CreatinaMaxTitanium.html"
     },
-    {
-        id:"4",
-        produto: 'Suplementos',
-        poster: 'suplementos/creatine-max-titanium-300g-1.webp',
-        link: 'suplementos.html'
-
-    }
 ];
 
-let tabelaDeProdutos = tabelaOriginal;
+// Função para ordenar produtos por nome (ordem alfabética)
+function ordenarPorNome(lista) {
+    return lista.slice().sort((a, b) => {
+        const nomeA = a.nome.toLowerCase();
+        const nomeB = b.nome.toLowerCase();
+        if (nomeA < nomeB) return -1;
+        if (nomeA > nomeB) return 1;
+        return 0;
+    });
+}
 
-const carregarListaDeProdutos = function(){
+// Função que carrega a lista de produtos no container
+function carregarListaDeProdutos(lista = produtosIndividuais) {
     containerDaListaDeProdutos.innerHTML = "";
 
-    tabelaDeProdutos.map( function(produto){
-        containerDaListaDeProdutos.innerHTML +=  `
-
+    lista.forEach((item) => {
+        containerDaListaDeProdutos.innerHTML += `
             <div class="produtos">
-            <a href="${produto.link}"><img src="${produto.poster}" alt="${produto.produto}"></a>
-                <h2 class="texto-produtos">${produto.produto}</h2>
+                <a href="${item.link}">
+                    <img src="${item.poster}" alt="${item.nome}">
+                </a>
+                <h2 class="texto-produtos">${item.nome}</h2>
             </div>
-        `
-    })
-};
+        `;
+    });
+}
 
-carregarListaDeProdutos();
-
+// Função para retirar acentos e normalizar texto para busca
 function retirar_acentos(text){
     const a = 'àáäâãèéëêìíïîòóöôùúüûñçßÿœæŕśńṕẃǵǹḿǘẍźḧ·/_,:;';
     const b = 'aaaaaeeeeiiiioooouuuuncsyoarsnpwgnmuxzh------';
     const p = new RegExp(a.split('').join('|'), 'g');
     return text.toString().toLowerCase().trim()
-    .replace(p, c => b.charAt(a.indexOf(c)))
-    .replace(/&/g, '-and-')
-    .replace(/[\s\W-]+/g, ' ');
-};
+        .replace(p, c => b.charAt(a.indexOf(c)))
+        .replace(/&/g, '-and-')
+        .replace(/[\s\W-]+/g, ' ');
+}
 
-campoDePesquisa.addEventListener("keyup", function(){
-    const resultado = tabelaDeProdutos.filter((produto)=> retirar_acentos(produto.produto).includes(retirar_acentos(campoDePesquisa.value)));
-    tabelaDeProdutos = resultado;
-    carregarListaDeProdutos();
-    tabelaDeProdutos = tabelaOriginal;
+// Evento de busca (filtra e ordena os produtos conforme texto digitado)
+campoDePesquisa.addEventListener("keyup", function () {
+    const textoBusca = retirar_acentos(campoDePesquisa.value);
+
+    if (textoBusca === "") {
+        carregarListaDeProdutos(ordenarPorNome(produtosIndividuais));
+        return;
+    }
+
+    const resultado = produtosIndividuais.filter(item =>
+        retirar_acentos(item.nome).includes(textoBusca)
+    );
+
+    carregarListaDeProdutos(ordenarPorNome(resultado));
 });
+
+// Carrega a lista ordenada ao iniciar a página
+carregarListaDeProdutos(ordenarPorNome(produtosIndividuais));
